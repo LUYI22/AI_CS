@@ -19,7 +19,7 @@ Remember, your goal is to help users succeed in their software engineering inter
 
 // POST function andle incoming requests
 export async function POST(req) {
-  const openai = new OpenAI();
+  const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
   const data = await req.json();
 
   // Create a chat completion request to the OpenAI API
